@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/main.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <header class="toggle1">
+        <nav><button onclick="darkMode()" title="Dark Mode/Light Mode"><i class="fa-solid fa-sun mode"></i></button></nav>
+    </header>
+    <main class="toggle2">
+        <section class="toggle3">
+            <div id="title">
+                <h1>Login</h1>
+            </div>
+            <div class="field">
+                <label for="usuario">Email:</label>
+                <div class="input">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" id="usuario" autofocus>
+                </div>
+            </div>
+            <div class="span">
+                <span>Insira seu Email corretamente</span>
+            </div>
+            <div class="field">
+                <label for="senha">Senha:</label>
+                <div class="input">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" id="senha">
+                </div>
+            </div>
+            <div class="span2">
+                <span>Senha deve conter no minimo 8 caracteres</span>
+            </div>
+            <div class="botao">
+                <button onclick="entrar()" id="btn">Entrar</button>
+            </div>
+            <div class="recuperar">
+                Esqueceu sua senha? <a href="">Clique aqui</a>
+            </div>
+        </section>
+        <div class="alerta">
+            <p>Preencha os campos corretamente</p>
+        </div>
+    </main>
+</body>
+    <script src="../JS/script.js"></script>
+</html>

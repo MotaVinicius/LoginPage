@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+:root{
+    --cor-fundo: #1a1a1afc;
+    --cor-primaria: #2c2c2ce7;
+    --cor-secundaria: #00a1ec;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: end;
+}
+nav button{
+    background-color: transparent;
+    border: none;
+    margin: 2vh 3vw;
+    
+}
+nav button i{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+nav button i:hover{
+    cursor: pointer;
+    color: #e7d944e8;
+    transition: all .4s;
+}
+/*corpo login*/
+main{
+    height: 92vh;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 55vh;
+    width: 25vw;
+    background-color: var(--cor-primaria);
+    color: aliceblue;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 25px 2px var(--cor-secundaria);
+}
+#title{
+    margin-top: -3vh;
+    font-size: 1.45vw;
+    margin-bottom: 3vh;
+}
+#title h1{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.931);
+    font-family: 'Ubuntu', sans-serif;
+    width: 6.5vw;
+    text-align: center;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: .8vh;
+}
+.field label{
+    font-size: 1.1vw;
+}
+.input{
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+.input i{
+    font-size: 1vw;
+    padding-left: .2vw;
+}
+.input input{
+    width: 12vw;
+    border: none;
+    background-color: transparent;
+    padding: 0 0.5vw;
+    color: aliceblue;
+    font-size: 1vw;
+}
+.input input:focus{
+    outline: none;
+}
+.botao button{
+    padding: .8vh 5.3vw;
+    background-color: #00a1ecb7;
+    color: aliceblue;
+    border-radius: .3vw;
+    font-size: .9vw;
+    border: none;
+    font-weight: 600;
+    transition: all .4s;
+}
+.botao button:hover{
+    background-color: rgb(240, 248, 255);
+    color: #00a1ec;
+    transition: all .4s;
+    cursor: pointer;
+}
+.recuperar a{
+    color: var(--cor-secundaria)
+}
+/*light mode*/
+.fa-moon{
+    color: black;
+}
+.fa-moon:hover{
+    color: #00a1ec;
+}
+.light{
+    background-color: aliceblue;
+    color: rgb(27, 27, 27);
+}
+.span2{
+    color: transparent;
+    font-size: .7vw;
+    margin-top: -2vh;
+}
+.span{
+    display: none;
+    color: white;
+}
+
+.alerta{
+    position: absolute;
+    top: 30px;
+    padding: .8vw 1.9vw;
+    background-color: #0087c6;
+    color: white;
+    border-radius: .2vw;
+    box-shadow: 0px 0px 10px 1px rgb(100, 100, 100);
+    font-weight: 600;
+    font-size: 1.1vw;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+.pop-up{
+    transition: alert .5s;
+}
+@keyframes alert{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
