@@ -1,10 +1,14 @@
 /* Light Mode */
 
+const senha = document.querySelector('.senha');
+const usuario = document.querySelector('.usuario');
+
 function darkMode() {
     let mode = document.querySelector('.mode')
     let body1 = document.querySelector('.toggle1')
     let body2 = document.querySelector('.toggle2')
     let body3 = document.querySelector('.toggle3')
+    let logo = document.querySelector('.logoh')
 
 
     if(mode.classList.contains('fa-moon')){
@@ -13,24 +17,28 @@ function darkMode() {
         body1.classList.remove('light')
         body2.classList.remove('light')
         body3.classList.remove('light')
+        logo.classList.remove('light')
     } else {
         mode.classList.remove('fa-sun');
         mode.classList.add('fa-moon');
         body1.classList.add('light')
         body2.classList.add('light')
         body3.classList.add('light')
+        logo.classList.add('light')
     }
 }
 
 /*validacao*/
-const senha = document.getElementById('senha');
-const usuario = document.getElementById('usuario');
+
 const botao = document.querySelector('#btn');
 const span2 = document.querySelector('.span2');
+const fechar = document.querySelector('#btn-pop');
+const alerta = document.querySelector('.alerta')
 
 senha.addEventListener('keyup', () => {
     if(senha.value.length > 8 || senha.value.length == 0) {
         span2.style.color = 'transparent'
+        botao.style.cursor = 'pointer'
     } else {
         span2.style.color = 'red'
         botao.style.cursor = 'not-allowed'
@@ -38,19 +46,24 @@ senha.addEventListener('keyup', () => {
 })
 usuario.addEventListener('keyup', () => {
     let span = document.querySelector('.span')
-    if(usuario.value.length < 10 && usuario.value.indexOf('@') !== -1 && usuario.value.indexOf('.com') !== -1) {
-        span.style.display = 'block'
+    if(usuario.value.length > 5 || usuario.value.length == 0) {
+        span.style.color = 'transparent'
+        botao.style.cursor = 'pointer'
     } else {
-        span.style.display = 'none'
+        span.style.color = 'red'
+        botao.style.cursor = 'not-allowed'
     }
 })
 
 function entrar(){
-    let alerta = document.querySelector('.alerta')
-    if(senha.value.length < 8){
-        alerta.classList.add('pop-up')
-        alert('Preencha')
+    if(senha.value.length > 8 && usuario.value.length > 5){
+        window.location.href = 'home.html'
     } else {
-        window.location.href = 'login.html'
+        alerta.classList.add('aparecer')
     }
 }
+
+fechar.addEventListener('click', () => {
+    alerta.classList.remove('aparecer')
+})
+

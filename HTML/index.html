@@ -9,32 +9,36 @@
 </head>
 <body>
     <header class="toggle1">
-        <nav><button onclick="darkMode()" title="Dark Mode/Light Mode"><i class="fa-solid fa-sun mode"></i></button></nav>
+        <nav>
+            <h1 class="logoh"><span class="logo">L</span>ogin<span class="logo">P</span>age</h1>
+            <button onclick="darkMode()" title="Dark Mode/Light Mode"><i class="fa-solid fa-sun mode"></i></button></nav>
     </header>
     <main class="toggle2">
         <section class="toggle3">
             <div id="title">
                 <h1>Login</h1>
             </div>
-            <div class="field">
-                <label for="usuario">Email:</label>
-                <div class="input">
-                    <i class="fa-solid fa-user"></i>
-                    <input type="email" id="usuario" autofocus>
+            <div id="inputs">
+                <div class="field">
+                    <label for="usuario">Usuário</label>
+                    <div class="input">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" class="usuario" autofocus>
+                    </div>
                 </div>
-            </div>
-            <div class="span">
-                <span>Insira seu Email corretamente</span>
-            </div>
-            <div class="field">
-                <label for="senha">Senha:</label>
-                <div class="input">
-                    <i class="fa-solid fa-key"></i>
-                    <input type="password" id="senha">
+                <div class="span">
+                    <span>Usuario deve conter no minimo 5 caracteres</span>
                 </div>
-            </div>
-            <div class="span2">
-                <span>Senha deve conter no minimo 8 caracteres</span>
+                <div class="field">
+                    <label for="senha">Senha</label>
+                    <div class="input">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" class="senha">
+                    </div>
+                </div>
+                <div class="span2">
+                    <span>Senha deve conter no minimo 8 caracteres</span>
+                </div>
             </div>
             <div class="botao">
                 <button onclick="entrar()" id="btn">Entrar</button>
@@ -44,7 +48,13 @@
             </div>
         </section>
         <div class="alerta">
-            <p>Preencha os campos corretamente</p>
+            <div class="close">
+                <button id="btn-pop"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="message">
+                <h2>Preencha os campos corretamente</h2>
+            </div>
+            <div class="empty"></div>
         </div>
     </main>
 </body>

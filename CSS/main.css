@@ -15,8 +15,10 @@ header {
     width: 100%;
     height: 8vh;
     background-color: var(--cor-fundo);
+}
+nav{
     display: flex;
-    justify-content: end;
+    justify-content:space-between;
 }
 nav button{
     background-color: transparent;
@@ -32,6 +34,15 @@ nav button i:hover{
     cursor: pointer;
     color: #e7d944e8;
     transition: all .4s;
+}
+nav h1{
+    margin: 1.4vh 2.8vw;
+    color: rgb(255, 255, 255);
+    font-size: 1.3vw;
+}
+.logo{
+    color: #0087c6;
+    font-size: 2vw;
 }
 /*corpo login*/
 main{
@@ -65,12 +76,14 @@ section{
     width: 6.5vw;
     text-align: center;
 }
-.field{
+#inputs{
     display: flex;
     flex-direction: column;
     gap: .8vh;
+    width: 14vw;
+    margin-bottom: -2vh;
 }
-.field label{
+label{
     font-size: 1.1vw;
 }
 .input{
@@ -123,41 +136,60 @@ section{
 }
 .span2{
     color: transparent;
-    font-size: .7vw;
-    margin-top: -2vh;
+    font-size: .6vw;
+    width: 20vw;
 }
 .span{
-    display: none;
-    color: white;
+    color: transparent;
+    font-size: .6vw;
+    width: 20vw;
 }
 
 .alerta{
     position: absolute;
-    top: 30px;
-    padding: .8vw 1.9vw;
+    top: -200px;
     background-color: #0087c6;
     color: white;
     border-radius: .2vw;
     box-shadow: 0px 0px 10px 1px rgb(100, 100, 100);
     font-weight: 600;
     font-size: 1.1vw;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 10vh;
     opacity: 0;
-    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
 }
-.pop-up{
-    transition: alert .5s;
+.close{
+    display: flex;
+    justify-content: end;
+    width: 25vw;
+    padding: .8vh .4vw 0 .4vw;
 }
-@keyframes alert{
-    0%{
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    50%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100%{
-        opacity: 0;
-        transform: translateY(-100%);
-    }
+.message{
+    text-align: center;
+    padding-bottom: 2vh;
 }
+.message h2{
+    font-size: 1.2vw;
+}
+#btn-pop{
+    background: transparent;
+    color: white;
+    padding: .1vw;
+    border: none;
+    cursor: pointer;
+}
+#btn-pop:hover{
+    color: red;
+}
+.fa-xmark{
+    font-size: 1.2vw;
+}
+.aparecer{
+    opacity: 1;
+    transform: translateY(250%);
+}
+
