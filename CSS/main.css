@@ -39,6 +39,7 @@ nav h1{
     margin: 1.4vh 2.8vw;
     color: rgb(255, 255, 255);
     font-size: 1.3vw;
+    cursor: default;
 }
 .logo{
     color: #0087c6;
@@ -68,10 +69,14 @@ section{
 #title{
     margin-top: -3vh;
     font-size: 1.45vw;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: .4vh;
 }
 #title h1{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.931);
     font-family: 'Ubuntu', sans-serif;
     width: 6.5vw;
     text-align: center;
@@ -93,7 +98,7 @@ label{
     font-size: 1vw;
     padding-left: .2vw;
 }
-.input input{
+.user, .senha{
     width: 12vw;
     border: none;
     background-color: transparent;
@@ -101,7 +106,7 @@ label{
     color: aliceblue;
     font-size: 1vw;
 }
-.input input:focus{
+.user:focus, .senha:focus{
     outline: none;
 }
 .botao button{
@@ -134,7 +139,7 @@ label{
     background-color: aliceblue;
     color: rgb(27, 27, 27);
 }
-.span2{
+.span2, .span3{
     color: transparent;
     font-size: .6vw;
     width: 20vw;
@@ -145,7 +150,7 @@ label{
     width: 20vw;
 }
 
-.alerta{
+.alerta, .ok{
     position: absolute;
     top: -200px;
     background-color: #0087c6;
@@ -188,8 +193,46 @@ label{
 .fa-xmark{
     font-size: 1.2vw;
 }
+#btn-ok{
+    width: 5vw;
+    height: 2.3vh;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    border-radius: .15vw;
+    border: none;
+    cursor: pointer;
+}
+#btn-ok:hover{
+    background-color: var(--cor-primaria);
+    color: white;
+}
 .aparecer{
     opacity: 1;
     transform: translateY(250%);
+}
+.back{
+    position: absolute;
+    top: 10vh;
+    left: 2.8vw;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.back i{
+    font-size: 2.1vw;
+    margin-left: .2vw;
+}
+.back small{
+    font-size: .5vw;
+}
+.back a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.senha::placeholder, .user::placeholder{
+    text-align: center;
+    font-size: .9vw;
 }
 

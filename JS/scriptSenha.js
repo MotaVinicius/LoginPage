@@ -1,7 +1,9 @@
 /* Light Mode */
 
 const senha = document.querySelector('.senha');
-const usuario = document.querySelector('.user');
+const senha2 = document.querySelector('.nova');
+const senha3 = document.querySelector('.confirmacao');
+
 
 function darkMode() {
     let mode = document.querySelector('.mode')
@@ -9,6 +11,7 @@ function darkMode() {
     let body2 = document.querySelector('.toggle2')
     let body3 = document.querySelector('.toggle3')
     let logo = document.querySelector('.logoh')
+    let back = document.querySelector('.fa-arrow-left')
 
 
     if(mode.classList.contains('fa-moon')){
@@ -19,7 +22,9 @@ function darkMode() {
         body3.classList.remove('light')
         logo.classList.remove('light')
         senha.classList.remove('light')
-        usuario.classList.remove('light')
+        senha2.classList.remove('light')
+        senha3.classList.remove('light')
+        back.classList.remove('light')
     } else {
         mode.classList.remove('fa-sun');
         mode.classList.add('fa-moon');
@@ -28,7 +33,9 @@ function darkMode() {
         body3.classList.add('light')
         logo.classList.add('light')
         senha.classList.add('light')
-        usuario.classList.add('light')
+        senha2.classList.add('light')
+        senha3.classList.add('light')
+        back.classList.add('light')
     }
 }
 
@@ -37,10 +44,24 @@ function darkMode() {
 const botao = document.querySelector('#btn');
 const span2 = document.querySelector('.span2');
 const fechar = document.querySelector('#btn-pop');
-const alerta = document.querySelector('.alerta')
+const span1 = document.querySelector('.span');
+const alerta = document.querySelector('.alerta');
+const span3 = document.querySelector('.span3');
+const ok = document.querySelector('.ok');
+
 
 senha.addEventListener('keyup', () => {
     if(senha.value.length >= 8 || senha.value.length == 0) {
+        span1.style.color = 'transparent'
+        botao.style.cursor = 'pointer'
+    } else {
+        span1.style.color = 'red'
+        botao.style.cursor = 'not-allowed'
+    }
+})
+
+senha2.addEventListener('keyup', () => {
+    if(senha2.value.length >= 8 || senha2.value.length == 0) {
         span2.style.color = 'transparent'
         botao.style.cursor = 'pointer'
     } else {
@@ -48,20 +69,22 @@ senha.addEventListener('keyup', () => {
         botao.style.cursor = 'not-allowed'
     }
 })
-usuario.addEventListener('keyup', () => {
-    let span = document.querySelector('.span')
-    if(usuario.value.length >= 5 || usuario.value.length == 0) {
-        span.style.color = 'transparent'
+senha3.addEventListener('keyup', () => {
+    if(senha3.value === senha2.value || senha3.value.length == 0){
+        span3.style.color = 'transparent'
         botao.style.cursor = 'pointer'
     } else {
-        span.style.color = 'red'
+        span3.style.color = 'red'
         botao.style.cursor = 'not-allowed'
     }
 })
 
-function entrar(){
-    if(senha.value.length >= 8 && usuario.value.length > 5){
-        window.location.href = 'home.html'
+function confirmar() {
+    if(senha.value.length >= 8 && senha2.value.length >= 8 && senha3.value === senha2.value) {
+        ok.classList.add('aparecer')
+        senha.value = '';
+        senha2.value = '';
+        senha3.value = '';
     } else {
         alerta.classList.add('aparecer')
     }
@@ -70,4 +93,8 @@ function entrar(){
 fechar.addEventListener('click', () => {
     alerta.classList.remove('aparecer')
 })
+
+function redirecionar() {
+    window.location.href = 'index.html'
+}
 

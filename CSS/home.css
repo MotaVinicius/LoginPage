@@ -104,4 +104,24 @@ body{
     opacity: 1;
     transform: translateY(250%);
 }
+.back{
+    position: absolute;
+    top: 4.5vh;
+    left: 2.2vw;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.back i{
+    font-size: 2.1vw;
+    margin-left: .2vw;
+}
+.back small{
+    font-size: .5vw;
+}
+.back a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
 
