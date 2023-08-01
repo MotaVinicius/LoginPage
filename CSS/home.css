@@ -124,4 +124,87 @@ body{
     display: flex;
     flex-direction: column;
 }
+@media screen and (max-width: 768px){
+    .alerta{
+        top: 40px;
+        border-radius: .6vw;
+        width: 55vw;
+        height: 12vh;
+    }
+    #column{
+        width: 27vw;
+    }
+    #photo{
+        width: 20vw;
+        height: 23vh;
+    }
+    #bio{
+        width: 20vw;
+    }.box{
+        background-color: #e2e2e2e2;
+        width: 60vw;
+        height: 35vh;
+        border-radius: 1vw;
+    }
+    #content{
+        justify-content: space-evenly;
+        height: 85vh;
+    }
+    .close{
+        width: 53vw;
+        padding: .8vh .5vw .5vh .4vw;
+    }
+    .message h2{
+        font-size: 3vw;
+    }
+    .fa-xmark{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 768px){
+    .alerta{
+        top: 25px;
+        border-radius: .6vw;
+        width: 75vw;
+        height: 12vh;
+    }
+    #column{
+        width: 27vw;
+        height: 80vh;
+    }
+    #photo{
+        width: 22vw;
+        height: 17vh;
+    }
+    #bio{
+        width: 20vw;
+        height: 50vh;
+    }.box{
+        background-color: #e2e2e2e2;
+        width: 60vw;
+        height: 30vh;
+        border-radius: 1vw;
+    }
+    #content{
+        justify-content: space-evenly;
+        height: 85vh;
+    }
+    .close{
+        width: 72vw;
+        padding: 1.3vh 1vw 1vh .4vw;
+    }
+    .message h2{
+        font-size: 5vw;
+    }
+    .fa-xmark{
+        font-size: 5vw;
+    }
+    .back i{
+        font-size: 6vw;
+    }
+    .back{
+        top: 3vh;
+        left: 2.5vw;
+    }
+}
 
