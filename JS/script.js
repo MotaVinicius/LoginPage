@@ -38,14 +38,22 @@ const botao = document.querySelector('#btn');
 const span2 = document.querySelector('.span2');
 const fechar = document.querySelector('#btn-pop');
 const alerta = document.querySelector('.alerta')
+const one = document.querySelector('.one')
+const two = document.querySelector('.two')
+
+const regex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
 
 senha.addEventListener('keyup', () => {
-    if(senha.value.length >= 8 || senha.value.length == 0) {
+    
+
+    if(regex.test(senha.value) && senha.value.length >= 8 || senha.value.length == 0) {
         span2.style.color = 'transparent'
         botao.style.cursor = 'pointer'
+        two.classList.remove('wrong')
     } else {
         span2.style.color = 'red'
         botao.style.cursor = 'not-allowed'
+        two.classList.add('wrong')
     }
 })
 usuario.addEventListener('keyup', () => {
@@ -53,14 +61,16 @@ usuario.addEventListener('keyup', () => {
     if(usuario.value.length >= 5 || usuario.value.length == 0) {
         span.style.color = 'transparent'
         botao.style.cursor = 'pointer'
+        one.classList.remove('wrong')
     } else {
         span.style.color = 'red'
         botao.style.cursor = 'not-allowed'
+        one.classList.add('wrong')
     }
 })
 
 function entrar(){
-    if(senha.value.length >= 8 && usuario.value.length > 5){
+    if(regex.test(senha.value) && senha.value.length >= 8 && usuario.value.length > 5){
         window.location.href = 'home.html'
     } else {
         alerta.classList.add('aparecer')
@@ -70,4 +80,3 @@ function entrar(){
 fechar.addEventListener('click', () => {
     alerta.classList.remove('aparecer')
 })
-

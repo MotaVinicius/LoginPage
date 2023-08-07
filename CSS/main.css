@@ -78,8 +78,9 @@ section{
 }
 #title h1{
     font-family: 'Ubuntu', sans-serif;
-    width: 6.5vw;
+    width: 20vw;
     text-align: center;
+    margin-bottom: 1vh;
 }
 #inputs{
     display: flex;
@@ -93,6 +94,11 @@ label{
 }
 .input{
     border-bottom: 2px solid var(--cor-secundaria);
+    transition: all .4s;
+}
+.wrong{
+    border-bottom: 2px solid red;
+    transition: all .4s;
 }
 .input i{
     font-size: 1vw;
@@ -110,6 +116,7 @@ label{
     outline: none;
 }
 .botao button{
+    margin-top: 1.5vh;
     padding: .8vh 5.3vw;
     background-color: #00a1ecb7;
     color: aliceblue;
@@ -139,15 +146,10 @@ label{
     background-color: aliceblue;
     color: rgb(27, 27, 27);
 }
-.span2, .span3{
+.span, .span2, .span3{
     color: transparent;
     font-size: .6vw;
-    width: 20vw;
-}
-.span{
-    color: transparent;
-    font-size: .6vw;
-    width: 20vw;
+    width: 16vw;
 }
 
 .alerta, .ok{
@@ -235,110 +237,111 @@ label{
     text-align: center;
     font-size: .9vw;
 }
-section{
-    width: 50vw;
-}
-#title{
-    font-size: 2.7vw;
-    margin-bottom: 0;
-}
-#title h1{
-    width: 9vw;
-}
-#inputs{
-    width: 28vw;
-    margin-bottom: -2vh;
-}
-label{
-    font-size: 2.5vw;
-}
-.input{
-    border-bottom: 3px solid var(--cor-secundaria);
-}
-.input i{
-    font-size: 2.5vw;
-    padding-left: .2vw;
-}
-.user, .senha{
-    width: 22vw;
-    font-size: 2.2vw;
-}
-.botao button{
-    padding: .8vh 8.8vw;
-    border-radius: .5vw;
-    font-size: 2vw;
-}
-.span, .span2, .span3{
-    color: transparent;
-    font-size: 1.5vw;
-    width: 30vw;
-}
-.logo{
-    font-size: 5vw;
-}
-nav h1{
-    font-size: 3vw;
-}
-nav button i{
-    font-size: 4vw;
-}
-.senha::placeholder, .user::placeholder{
-    font-size: 2vw;
+@media screen and (max-width: 768px){
+    section{
+        width: 50vw;
+    }
+    #title{
+        font-size: 2.7vw;
+        margin-bottom: 0;
+    }
+    #title h1{
+        width: 19vw;
+    }
+    #inputs{
+        width: 28vw;
+        margin-bottom: -2vh;
+    }
+    label{
+        font-size: 2.5vw;
+    }
+    .input{
+        border-bottom: 3px solid var(--cor-secundaria);
+    }
+    .input i{
+        font-size: 2.5vw;
+        padding-left: .2vw;
+    }
+    .user, .senha{
+        width: 22vw;
+        font-size: 2.2vw;
+    }
+    .botao button{
+        padding: .8vh 8.8vw;
+        border-radius: .5vw;
+        font-size: 2vw;
+    }
+    .span, .span2, .span3{
+        color: transparent;
+        font-size: 1.5vw;
+        width: 30vw;
+    }
+    .logo{
+        font-size: 5vw;
+    }
+    nav h1{
+        font-size: 3vw;
+    }
+    nav button i{
+        font-size: 4vw;
+    }
+    .senha::placeholder, .user::placeholder{
+        font-size: 2vw;
+    }
 }
 @media screen and (max-width: 450px){
-section{
-    width: 70vw;
+    section{
+        width: 70vw;
+    }
+    #title{
+        font-size: 4vw;
+        margin-bottom: 0;
+    }
+    #title h1{
+        width: 54vw;
+    }
+    #inputs{
+        width: 45vw;
+    }
+    label{
+        font-size: 4vw;
+    }
+    .input{
+        border-bottom: 3px solid var(--cor-secundaria);
+    }
+    .input i{
+        font-size: 4vw;
+        padding-left: .2vw;
+    }
+    .user, .senha{
+        width: 37vw;
+        font-size: 3vw;
+    }
+    .botao button{
+        padding: .7vh 15.4vw;
+        border-radius: .5vw;
+        font-size: 3.7vw;
+    }
+    .span, .span2, .span3{
+        color: transparent;
+        font-size: 2.5vw;
+        width: 50vw;
+    }
+    .logo{
+        font-size: 7.5vw;
+    }
+    nav h1{
+        font-size: 5vw;
+    }
+    nav button i{
+        font-size: 5vw;
+    }
+    .senha::placeholder, .user::placeholder{
+        font-size: 3vw;
+    }
+    .recuperar{
+        width: 45vw;
+        font-size: 3.5vw;
+        text-align: center;
+    }
 }
-#title{
-    font-size: 4vw;
-    margin-bottom: 0;
-}
-#title h1{
-    width: 14vw;
-}
-#inputs{
-    width: 45vw;
-}
-label{
-    font-size: 4vw;
-}
-.input{
-    border-bottom: 3px solid var(--cor-secundaria);
-}
-.input i{
-    font-size: 4vw;
-    padding-left: .2vw;
-}
-.user, .senha{
-    width: 37vw;
-    font-size: 2.2vw;
-}
-.botao button{
-    padding: .7vh 15.4vw;
-    border-radius: .5vw;
-    font-size: 3.7vw;
-}
-.span, .span2, .span3{
-    color: transparent;
-    font-size: 1.5vw;
-    width: 30vw;
-}
-.logo{
-    font-size: 7.5vw;
-}
-nav h1{
-    font-size: 5vw;
-}
-nav button i{
-    font-size: 5vw;
-}
-.senha::placeholder, .user::placeholder{
-    font-size: 3vw;
-}
-.recuperar{
-    width: 45vw;
-    font-size: 3.5vw;
-    text-align: center;
-}
-}
-

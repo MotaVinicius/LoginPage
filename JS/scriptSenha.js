@@ -49,38 +49,50 @@ const alerta = document.querySelector('.alerta');
 const span3 = document.querySelector('.span3');
 const ok = document.querySelector('.ok');
 
+const one = document.querySelector('.one')
+const two = document.querySelector('.two')
+const three = document.querySelector('.three')
+
+const regex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
+
 
 senha.addEventListener('keyup', () => {
-    if(senha.value.length >= 8 || senha.value.length == 0) {
+    if(regex.test(senha.value) && senha.value.length >= 8 || senha.value.length == 0) {
         span1.style.color = 'transparent'
         botao.style.cursor = 'pointer'
+        one.classList.remove('wrong')
     } else {
         span1.style.color = 'red'
         botao.style.cursor = 'not-allowed'
+        one.classList.add('wrong')
     }
 })
 
 senha2.addEventListener('keyup', () => {
-    if(senha2.value.length >= 8 || senha2.value.length == 0) {
+    if(regex.test(senha2.value) && senha2.value.length >= 8 || senha2.value.length == 0) {
         span2.style.color = 'transparent'
         botao.style.cursor = 'pointer'
+        two.classList.remove('wrong')
     } else {
         span2.style.color = 'red'
         botao.style.cursor = 'not-allowed'
+        two.classList.add('wrong')
     }
 })
 senha3.addEventListener('keyup', () => {
     if(senha3.value === senha2.value || senha3.value.length == 0){
         span3.style.color = 'transparent'
         botao.style.cursor = 'pointer'
+        three.classList.remove('wrong')
     } else {
         span3.style.color = 'red'
         botao.style.cursor = 'not-allowed'
+        three.classList.add('wrong')
     }
 })
 
 function confirmar() {
-    if(senha.value.length >= 8 && senha2.value.length >= 8 && senha3.value === senha2.value) {
+    if(regex.test(senha.value) && senha.value.length >= 8 && regex.test(senha2.value) && senha2.value.length >= 8 && senha3.value === senha2.value) {
         ok.classList.add('aparecer')
         senha.value = '';
         senha2.value = '';
