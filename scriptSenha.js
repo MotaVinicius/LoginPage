@@ -57,7 +57,7 @@ const regex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
 
 
 senha.addEventListener('keyup', () => {
-    if(regex.test(senha.value) && senha.value.length >= 8 || senha.value.length == 0) {
+    if((senha.value) && senha.value.length >= 5 || senha.value.length == 0) {
         span1.style.color = 'transparent'
         botao.style.cursor = 'pointer'
         one.classList.remove('wrong')
@@ -92,7 +92,7 @@ senha3.addEventListener('keyup', () => {
 })
 
 function confirmar() {
-    if(regex.test(senha.value) && senha.value.length >= 8 && regex.test(senha2.value) && senha2.value.length >= 8 && senha3.value === senha2.value) {
+    if((senha.value) && senha.value.length >= 5 && regex.test(senha2.value) && senha2.value.length >= 8 && senha3.value === senha2.value) {
         ok.classList.add('aparecer')
         senha.value = '';
         senha2.value = '';

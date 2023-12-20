@@ -77,6 +77,43 @@ function entrar(){
     }
 }
 
+/*
+document.getElementById('btn').addEventListener('click', function() {
+    const login = document.querySelector('.user').value;
+    const senha = document.querySelector('.senha').value;
+
+    // Crie um objeto com as credenciais
+    const credentials = {
+        login: login,
+        senha: senha
+    };
+
+    // Faça uma requisição POST à sua API de login
+    fetch('http://localhost:4000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Se o login for bem-sucedido, faça algo como redirecionar o usuário
+            window.location.href = 'home.html';
+        } else {
+            // Se o login falhar, mostre uma mensagem de erro
+            document.querySelector('.message h2').textContent = 'Credenciais inválidas. Tente novamente.';
+            // E exiba o alerta de erro
+            document.querySelector('.alerta').style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao tentar fazer login:', error);
+    });
+})
+*/
+
 fechar.addEventListener('click', () => {
     alerta.classList.remove('aparecer')
 })
